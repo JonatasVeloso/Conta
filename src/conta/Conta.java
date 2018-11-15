@@ -3,7 +3,7 @@ package conta;
 public abstract class Conta {
 	private int agencia;
 	private int numero;
-	private double saldo;
+	protected double saldo;
 
 	public Conta(int agencia, int numero) {
 		this.agencia = agencia;
@@ -30,9 +30,7 @@ public abstract class Conta {
 		return saldo;
 	}
 	
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
+	public abstract void deposita(double valor);
 	
 	public void transfere(double valor, Conta conta) {
 		conta.saldo += valor;
@@ -44,8 +42,5 @@ public abstract class Conta {
 		System.out.println("Saldo: " + this.saldo);
 	}
 	
-	public void saca(double valor) {
-		this.saldo -= valor;
-	}
-
+	public abstract void saca(double valor);
 }
