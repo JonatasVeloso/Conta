@@ -1,4 +1,7 @@
-package conta;
+package conta.testes;
+
+import conta.objetos.ContaCorrente;
+import conta.objetos.ContaPoupanca;
 
 public class TesteContas {
 	public static void main(String[] args) {

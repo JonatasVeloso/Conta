@@ -1,4 +1,4 @@
-package conta;
+package conta.objetos;
 
 public abstract class Conta {
 	private int agencia;
