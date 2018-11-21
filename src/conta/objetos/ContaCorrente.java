@@ -1,5 +1,6 @@
 package conta.objetos;
 
+import conta.exeptions.SemSaldoExeption;
 import conta.interfaces.Tributavel;
 
 public final class ContaCorrente extends Conta implements Tributavel {
@@ -9,8 +10,9 @@ public final class ContaCorrente extends Conta implements Tributavel {
 	}
 
 	@Override
-	public void saca(double valor) {
-		this.saldo -= (valor + 0.2);
+	public void saca(double valor) throws SemSaldoExeption {
+		valor = valor + 0.2;
+		super.saca(valor);			
 	}
 
 	@Override

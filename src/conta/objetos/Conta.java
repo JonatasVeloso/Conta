@@ -1,5 +1,7 @@
 package conta.objetos;
 
+import conta.exeptions.SemSaldoExeption;
+
 public abstract class Conta {
 	private int agencia;
 	private int numero;
@@ -42,5 +44,10 @@ public abstract class Conta {
 		System.out.println("Saldo: " + this.saldo);
 	}
 	
-	public abstract void saca(double valor);
+	public void saca(double valor) throws SemSaldoExeption {
+		if(this.saldo < valor) {
+			throw new SemSaldoExeption("ERRO: Saldo Insuficiente!");
+		}
+		this.saldo -= valor;
+	};
 }
