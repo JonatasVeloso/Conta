@@ -1,6 +1,6 @@
-package conta;
+package br.com.jonatas.conta;
 
-import conta.interfaces.Tributavel;
+import br.com.jonatas.conta.interfaces.Tributavel;
 
 public class CalculadorDeImposto {
 

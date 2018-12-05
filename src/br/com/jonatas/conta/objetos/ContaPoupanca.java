@@ -1,4 +1,4 @@
-package conta.objetos;
+package br.com.jonatas.conta.objetos;
 
 public final class ContaPoupanca extends Conta{
 	public ContaPoupanca(int agencia, int numero) {

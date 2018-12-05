@@ -1,7 +1,8 @@
-package conta.testes;
+package br.com.jonatas.conta.testes;
 
-import conta.objetos.ContaCorrente;
-import conta.objetos.ContaPoupanca;
+import br.com.jonatas.conta.exeptions.SemSaldoExeption;
+import br.com.jonatas.conta.objetos.ContaCorrente;
+import br.com.jonatas.conta.objetos.ContaPoupanca;
 
 public class TesteContas {
 	public static void main(String[] args) {
@@ -11,7 +12,12 @@ public class TesteContas {
 		ContaPoupanca cp = new ContaPoupanca(222, 222);
 		cp.deposita(100);
 		
-		cc.saca(20);
+		try {
+			cc.saca(20);
+		}catch(SemSaldoExeption e){
+			System.out.println(e);
+		}
+		
 		cc.detalhes();
 		
 		cc.transfere(10, cp);

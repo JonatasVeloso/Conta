@@ -1,6 +1,6 @@
-package conta.objetos;
+package br.com.jonatas.conta.objetos;
 
-import conta.exeptions.SemSaldoExeption;
+import br.com.jonatas.conta.exeptions.SemSaldoExeption;
 
 public abstract class Conta {
 	private int agencia;

@@ -1,8 +1,8 @@
-package conta.testes;
+package br.com.jonatas.conta.testes;
 
-import conta.CalculadorDeImposto;
-import conta.objetos.ContaCorrente;
-import conta.objetos.SeguroDeVida;
+import br.com.jonatas.conta.CalculadorDeImposto;
+import br.com.jonatas.conta.objetos.ContaCorrente;
+import br.com.jonatas.conta.objetos.SeguroDeVida;
 
 public class TesteTributaveis {
 	public static void main(String[] args){

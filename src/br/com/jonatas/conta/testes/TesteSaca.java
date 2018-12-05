@@ -1,7 +1,7 @@
-package conta.testes;
+package br.com.jonatas.conta.testes;
 
-import conta.exeptions.SemSaldoExeption;
-import conta.objetos.ContaCorrente;
+import br.com.jonatas.conta.exeptions.SemSaldoExeption;
+import br.com.jonatas.conta.objetos.ContaCorrente;
 
 public class TesteSaca {
 	public static void main(String[] args) {

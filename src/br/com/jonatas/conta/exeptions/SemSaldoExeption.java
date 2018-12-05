@@ -1,4 +1,4 @@
-package conta.exeptions;
+package br.com.jonatas.conta.exeptions;
 
 public class SemSaldoExeption extends Exception {
 	public SemSaldoExeption() {

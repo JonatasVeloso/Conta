@@ -1,6 +1,6 @@
-package conta.objetos;
+package br.com.jonatas.conta.objetos;
 
-import conta.interfaces.Tributavel;
+import br.com.jonatas.conta.interfaces.Tributavel;
 
 public class SeguroDeVida implements Tributavel {
 

@@ -1,7 +1,7 @@
-package conta.objetos;
+package br.com.jonatas.conta.objetos;
 
-import conta.exeptions.SemSaldoExeption;
-import conta.interfaces.Tributavel;
+import br.com.jonatas.conta.exeptions.SemSaldoExeption;
+import br.com.jonatas.conta.interfaces.Tributavel;
 
 public final class ContaCorrente extends Conta implements Tributavel {
 	public ContaCorrente(int agencia, int numero) {
