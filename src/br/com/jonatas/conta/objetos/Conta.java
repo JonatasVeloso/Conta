@@ -32,7 +32,9 @@ public abstract class Conta {
 		return saldo;
 	}
 	
-	public abstract void deposita(double valor);
+	public void deposita(double valor) {
+		this.saldo += valor;
+	};
 	
 	public void transfere(double valor, Conta conta) {
 		conta.saldo += valor;
@@ -49,5 +51,5 @@ public abstract class Conta {
 			throw new SemSaldoExeption("ERRO: Saldo Insuficiente!");
 		}
 		this.saldo -= valor;
-	};
+	}
 }

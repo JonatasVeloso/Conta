@@ -3,12 +3,27 @@ package br.com.jonatas.conta.objetos;
 import br.com.jonatas.conta.exeptions.SemSaldoExeption;
 import br.com.jonatas.conta.interfaces.Tributavel;
 
+/**
+ * Objeto Conta Corrente
+ * @author Jonatas Veloso
+ * 
+ */
 public final class ContaCorrente extends Conta implements Tributavel {
+	
+	/**
+	 * 
+	 * @param agencia
+	 * @param numero
+	 */
 	public ContaCorrente(int agencia, int numero) {
 		super(agencia, numero);
 
 	}
 
+	/**
+	 * Sobreposição do método Saca
+	 * O saque em conta Corrente tem desconto 
+	 */
 	@Override
 	public void saca(double valor) throws SemSaldoExeption {
 		valor = valor + 0.2;
@@ -16,12 +31,13 @@ public final class ContaCorrente extends Conta implements Tributavel {
 	}
 
 	@Override
-	public void deposita(double valor) {
-		this.saldo += valor;
-	}
-
-	@Override
 	public double getValorImposto() {
 		return super.saldo * 0.01;
+	}
+	
+	@Override
+	public void detalhes() {
+		System.out.println("Conta Corrente: ");
+		super.detalhes();
 	}
 }
