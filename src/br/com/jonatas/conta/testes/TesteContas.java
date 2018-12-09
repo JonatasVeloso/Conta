@@ -18,10 +18,10 @@ public class TesteContas {
 			System.out.println(e);
 		}
 		
-		cc.detalhes();
+		System.out.println(cc);
 		
 		cc.transfere(10, cp);
-		cc.detalhes();
-		cp.detalhes();
+		System.out.println(cc);
+		System.out.println(cp);
 	}
 }

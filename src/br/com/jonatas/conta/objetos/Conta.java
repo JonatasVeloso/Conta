@@ -31,23 +31,25 @@ public abstract class Conta {
 	public double getSaldo() {
 		return saldo;
 	}
-	
+
 	public void deposita(double valor) {
 		this.saldo += valor;
 	};
-	
+
 	public void transfere(double valor, Conta conta) {
 		conta.saldo += valor;
 		this.saldo -= valor;
 	}
 	
-	public void detalhes() {
-		System.out.println("Conta: " + this.agencia + " Número: " + this.numero);
+	@Override
+	public String toString() {
+		System.out.println("Número: " + this.agencia + " Número: " + this.numero);
 		System.out.println("Saldo: " + this.saldo);
+		return "";
 	}
-	
+
 	public void saca(double valor) throws SemSaldoExeption {
-		if(this.saldo < valor) {
+		if (this.saldo < valor) {
 			throw new SemSaldoExeption("ERRO: Saldo Insuficiente!");
 		}
 		this.saldo -= valor;

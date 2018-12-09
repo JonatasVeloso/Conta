@@ -19,4 +19,11 @@ public final class ContaPoupanca extends Conta {
 	public ContaPoupanca(int agencia, int numero) {
 		super(agencia, numero);
 	}
+		
+	@Override
+	public String toString() {
+		System.out.print("Conta Poupança: ");
+		return super.toString();
+	}
+	
 }

@@ -7,13 +7,13 @@ public class TesteSaca {
 	public static void main(String[] args) {
 		ContaCorrente cc = new ContaCorrente(111, 111);
 		cc.deposita(200);
-		cc.detalhes();
+		System.out.println(cc);
 		try {
 			cc.saca(200);	
 		}catch(SemSaldoExeption e){
 			System.out.println(e.getMessage());
 		}
 
-		cc.detalhes();
+		System.out.println(cc);
 	}
 }

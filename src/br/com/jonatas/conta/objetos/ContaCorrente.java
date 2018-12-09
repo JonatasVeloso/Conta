@@ -35,9 +35,12 @@ public final class ContaCorrente extends Conta implements Tributavel {
 		return super.saldo * 0.01;
 	}
 	
+	/**
+	 * Mensagem que irá sair no println
+	 */
 	@Override
-	public void detalhes() {
-		System.out.println("Conta Corrente: ");
-		super.detalhes();
+	public String toString() {
+		System.out.print("Conta Corrente: ");
+		return super.toString();
 	}
 }
