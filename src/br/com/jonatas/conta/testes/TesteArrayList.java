@@ -25,5 +25,9 @@ public class TesteArrayList {
 		for(Object obj : lista) {
 			System.out.println(obj);
 		}
+		
+		if(lista.contains(cc)) {
+			System.out.println("Conta já existe na Lista!");
+		}
 	}
 }
